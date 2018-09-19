@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MyFirstHWController {
+
     @RequestMapping("/hello")
     public String responsePrint(@RequestParam(value = "name") String name) {
         return "Hello " + name + "!";
