@@ -1,6 +1,7 @@
 package B.N.Smirnov91.demoWebbApp_v3;
 
 ///*
+
 import static org.hamcrest.Matchers.containsString;
 //import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -22,14 +23,14 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @AutoConfigureMockMvc
 public class DemoWebbAppV3ApplicationTest {
 
-	@Autowired
-	private MockMvc mvc;
+    @Autowired
+    private MockMvc mvc;
 
-	@Test
-	public void testGetMyFirstHWControllerIndex() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello, stranger!")));
-	}
+    @Test
+    public void testGetMyFirstHWControllerIndex() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Hello, stranger!")));
+    }
 
 }
